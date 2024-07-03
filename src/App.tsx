@@ -47,6 +47,7 @@ function App() {
       console.error('Fetch error:', error);
     }
   }, [])
+  
 
   const handleGroupSelect = (group: string) => {
     if (group == "All Sections") {
