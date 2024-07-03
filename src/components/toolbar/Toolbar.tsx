@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from 'react';
-import { Product } from '../../constants';
 import { useStore } from '../../store';
 import './toolbar.css'
 import { handlePrint } from "../../utils";

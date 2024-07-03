@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import '../../styles/App.css'
 import { Product } from '../../constants';
 import '../card/card.css'
