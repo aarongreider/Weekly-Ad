@@ -1,0 +1,68 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+// make this card--menu, was menuItem
+.card--menu {
+	// more in general
+	order: 1;
+	//margin: 0 0 10px 0;
+	width: auto;
+	min-width: 150px;
+
+	.cardTextContainer {
+		gap: 0;
+		padding: 0;
+	}
+
+	img {
+		display: none;
+	}
+
+	&:hover>.add {
+		opacity: 1;
+	}
+
+	.add {
+		opacity: .5;
+	}
+
+	.priceContainer {
+		font-size: 10px;
+	}
+
+	.badgeContainer {
+		display: none;
+	}
+
+}
+
+/* CARD MISC MODIFIERS */
+.menuContainer {
+	display: flex;
+	flex-direction: row;
+	gap: 10px;
+	flex-grow: 1;
+
+	.menuItemContainer {
+		display: none;
+		gap: 10px;
+		flex-direction: column;
+		max-height: 420px;
+		flex-wrap: wrap;
+		flex-grow: 1;
+
+		.menuSpacer {
+			order: 2;
+			flex-grow: 9999999;
+		}
+	}
+}
+
+.seeMenuButton {
+    @include buttonInline();
+    top: -4px;
+    gap: 7px;
+}
+
+.flex {
+	display: flex !important;
+}

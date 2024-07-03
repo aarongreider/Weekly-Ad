@@ -1,0 +1,163 @@
+/* css selectors for printing */
+.material-symbols-outlined {
+  display: none;
+}
+
+#listCardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 450px;
+  overflow: visible;
+  position: relative;
+}
+#listCardContainer > :last-child {
+  margin-bottom: 300px;
+}
+
+#listControls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 11px;
+  position: sticky;
+  top: 0;
+}
+#listControls #scrollPrint {
+  align-items: center;
+  justify-content: center;
+  background: #EDEAE7;
+}
+
+.close {
+  position: absolute;
+  left: 20px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.showCards {
+  display: flex !important;
+}
+
+.noScroll {
+  overflow: hidden;
+}
+
+#totalButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  padding: 0px 10px;
+  margin: 6px;
+  border-radius: 12px;
+  border: 3px solid #C6BCB3;
+  background: #EDEAE7;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25), 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #888079;
+  line-height: normal;
+  font-style: normal;
+  margin: 0;
+  padding: 15px 10px;
+  height: auto;
+  color: black;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.dragIcon {
+  color: #C6BCB3;
+  padding: 34px 0;
+  cursor: grab;
+}
+
+.card--shop {
+  /* layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  height: auto;
+  padding: 8px 9px;
+  gap: 10px;
+  /* style */
+  border-radius: 10px;
+  background: #EDEAE7;
+  /* Soft Drop */
+  box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.25), 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+  transition: transform 100ms cubic-bezier(0.15, 0, 0.17, 1.02), box-shadow 100ms cubic-bezier(0.15, 0, 0.17, 1.02);
+}
+.card--shop:hover {
+  transform: translate(-1px, -2.5px);
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.36), 1px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+.card--shop > img {
+  border-radius: 13px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 130px;
+  height: 100px;
+}
+.card--shop > .cardTextContainer {
+  display: flex;
+  padding: 7px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: 1;
+}
+.card--shop > .cardTextContainer > h2 {
+  color: #0C5900;
+  font-family: "myriad-pro-semi-condensed", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 126.6%;
+  /* 25.32px */
+  letter-spacing: -0.8px;
+  margin: 0;
+}
+.card--shop > .cardTextContainer > p {
+  color: #0C5900;
+  font-family: "myriad-pro-semi-condensed", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120.6%;
+  /* 19.296px */
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+.card--shop > .cardTextContainer .deleteButton {
+  position: absolute;
+  top: -8px;
+  left: -16px;
+  color: darkred;
+  /* height: 40px; */
+  padding: 5px;
+}
+.card--shop > .cardTextContainer .quantityControls {
+  /* layout */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  /* typography */
+  font-family: "myriad-pro-semi-condensed", sans-serif;
+  font-weight: 500;
+  color: #0C5900;
+}
+.card--shop > .cardTextContainer .quantityControls .quantityButton {
+  cursor: pointer;
+}/*# sourceMappingURL=print.css.map */

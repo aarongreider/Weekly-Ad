@@ -1,0 +1,170 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+
+.scrollContainer {
+    /* layout */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 12px;
+    position: fixed;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    padding: 14px;
+    z-index: 1001;
+
+    /* style */
+    //border-radius: 12px;
+    //border: 3px solid $menu-grey;
+    background: rgba(0, 0, 0, 0.35);
+
+    /* effects */
+    box-shadow: $soft-drop;
+    backdrop-filter: blur(2px);
+
+    #listCardContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        //margin-top: 10px;
+        max-width: 450px;
+        overflow: visible;
+        position: relative;
+        //max-height: 80vh;
+
+        > :last-child {
+            margin-bottom: 300px;
+        }
+    }
+
+    #listControls {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 11px;
+        position: sticky;
+        top: 0;
+
+        #scrollPrint {
+            //height: 24px;
+            align-items: center;
+            justify-content: center;
+            background: $offwhite;
+        }
+    }
+
+    .close {
+        position: absolute;
+        left: 20px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        color: $menu-black;
+    }
+}
+
+.showCards {
+    display: flex !important;
+}
+
+.noScroll {
+    overflow: hidden;
+}
+
+
+.ghost {
+    opacity: .5;
+}
+
+#totalButton {
+    @include button();
+    @include buttonTypography();
+
+    margin: 0;
+    padding: 15px 10px;
+    height: auto;
+    color: black;
+    font-weight: 600;
+    text-transform: capitalize;
+
+}
+
+.dragIcon {
+    color: $warm-grey;
+    padding: 34px 0;
+    cursor: grab;
+}
+
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 140px;
+    }
+
+    .scrollContainer {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        #listCardContainer {
+            order: 2;
+            width: 92vw;
+        }
+
+        #listControls {
+            order: 1;
+            flex-direction: row;
+        }
+    }
+}
+
+/* css selectors for printing */
+@media print {
+    body :not(.scrollContainer *):not(.scrollContainer) {
+        display: none !important;
+    }
+
+    .scrollContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        overflow: visible;
+        background: white;
+        box-shadow: none;
+
+        #listCardContainer {
+            display: flex;
+            order: 2;
+            height: auto;
+            max-height: none;
+            width: 100vw;
+
+            .listCard {
+                background-color: white !important;
+                width: 90vw !important;
+
+                >.cardTextContainer .deleteButton {
+                    display: none;
+                }
+            }
+        }
+
+        #listControls {
+            order: 1;
+            flex-direction: row;
+
+            #scrollPrint {
+                display: none;
+            }
+        }
+    }
+}

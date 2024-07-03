@@ -1,0 +1,12 @@
+h1,
+h2,
+h3,
+h4,
+a {
+  font-family: "myriad-pro-semi-condensed", sans-serif;
+}
+
+h1 {
+  font-size: calc(24px + 6 * (100vw - 320px) / 680);
+  font-weight: 900;
+}/*# sourceMappingURL=App.css.map */
