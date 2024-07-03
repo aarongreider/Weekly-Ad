@@ -56,6 +56,9 @@
 .card > .cardTextContainer sup {
   font-size: 3em;
   margin: 0.1em 0;
+  line-height: normal !important;
+  vertical-align: baseline !important;
+  position: static !important;
 }
 .card > .cardTextContainer .dollar {
   font-size: 6em;

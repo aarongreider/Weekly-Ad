@@ -72,6 +72,9 @@
 		sup {
 			font-size: 3em;
 			margin: .1em 0;
+			line-height: normal !important;
+			vertical-align: baseline !important;
+			position: static !important;
 		}
 
 		.dollar {
