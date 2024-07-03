@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import '/Users/agreider/Desktop/Projects/_Weekly Ad/ReactAd/Weekly-Ad/src/styles/App.css'
+import './styles/App.css'
 import { groupByKey } from './utils';
 import { AD_ITEM_KEYS, API_URL } from './constants';
 import SectionContainer from './components/section/SectionContainer';

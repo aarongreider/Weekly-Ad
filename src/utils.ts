@@ -66,10 +66,7 @@ export const handlePrint = (printRef: any) => {
         if (printWindow) {
             printWindow.document.write('<html><head><title>Print</title>');
             // Include stylesheets or inline styles
-            printWindow.document.write('<link rel="stylesheet" href="/Users/agreider/Desktop/Projects/_Weekly Ad/ReactAd/Weekly-Ad/src/styles/print.css" />'); // Include necessary CSS
-            /*  printWindow.document.write('<link rel="stylesheet" href="/Users/agreider/Desktop/Projects/_Weekly Ad/ReactAd/Weekly-Ad/src/components/shopList/shoppingList.css" />'); // Include necessary CSS
-             printWindow.document.write('<link rel="stylesheet" href="/Users/agreider/Desktop/Projects/_Weekly Ad/ReactAd/Weekly-Ad/src/components/shopList/cardShop.css/" />'); // Include necessary CSS
-              */
+            printWindow.document.write('<link rel="stylesheet" href="/src/styles/print.css" />'); // Include necessary CSS
             printWindow.document.write('</head><body>');
             printWindow.document.write(printContent);
             printWindow.document.write('</body></html>');
