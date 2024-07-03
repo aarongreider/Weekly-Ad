@@ -77,6 +77,7 @@
   justify-content: center;
   height: 40px;
   color: rgba(0, 0, 0, 0.75);
+  opacity: 1;
 }
 
 .showCards {
@@ -125,7 +126,6 @@
     width: auto;
     flex-direction: row;
     max-width: none;
-    padding-bottom: 10px;
     align-items: center;
   }
   .card img {
