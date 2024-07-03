@@ -94,7 +94,7 @@ function App() {
 
   return (
     <>
-      <div id="ad">
+      <div id="ad" >
         <ShoppingList visible={listIsOpen} printRef={printRef} closeList={handleToggleList}></ShoppingList>
         {activeGroup && Object.entries(activeGroup).map((group, index) => {
           return <SectionContainer key={index} sectionProducts={group} sectionTitle={group[0]} tagline={group[1][0][AD_ITEM_KEYS.tagline]}></SectionContainer>

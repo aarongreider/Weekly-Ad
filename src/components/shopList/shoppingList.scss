@@ -36,10 +36,7 @@
         overflow: visible;
         position: relative;
         //max-height: 80vh;
-
-        > :last-child {
-            margin-bottom: 300px;
-        }
+        padding-bottom: 100px;
     }
 
     #listControls {
@@ -50,6 +47,7 @@
         gap: 11px;
         position: sticky;
         top: 0;
+        z-index: 1002;
 
         #scrollPrint {
             //height: 24px;
@@ -57,18 +55,32 @@
             justify-content: center;
             background: $offwhite;
         }
+
+        #totalButton {
+            @include button();
+            @include buttonTypography();
+
+            margin: 0;
+            padding: 15px 10px;
+            height: 21px;
+            color: black;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+
+        .close {
+            position: relative;
+            //left: 20px;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            color: $menu-black;
+        }
     }
 
-    .close {
-        position: absolute;
-        left: 20px;
-        width: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 40px;
-        color: $menu-black;
-    }
+
 }
 
 .showCards {
@@ -80,27 +92,11 @@
 }
 
 
-.ghost {
-    opacity: .5;
-}
-
-#totalButton {
-    @include button();
-    @include buttonTypography();
-
-    margin: 0;
-    padding: 15px 10px;
-    height: auto;
-    color: black;
-    font-weight: 600;
-    text-transform: capitalize;
-
-}
-
 .dragIcon {
     color: $warm-grey;
     padding: 34px 0;
     cursor: grab;
+    touch-action: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -110,8 +106,9 @@
 
     .scrollContainer {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: flex-start;
+        width: auto;
 
         #listCardContainer {
             order: 2;
@@ -121,50 +118,93 @@
         #listControls {
             order: 1;
             flex-direction: row;
+            align-items: center;
         }
     }
 }
 
-/* css selectors for printing */
-@media print {
-    body :not(.scrollContainer *):not(.scrollContainer) {
-        display: none !important;
+@media only screen and (max-width: 400px) {
+    .section {
+        justify-content: center;
     }
 
-    .scrollContainer {
-        display: flex;
+    .menuContainer {
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        position: relative;
-        overflow: visible;
-        background: white;
-        box-shadow: none;
+    }
 
-        #listCardContainer {
-            display: flex;
-            order: 2;
-            height: auto;
-            max-height: none;
-            width: 100vw;
 
-            .listCard {
-                background-color: white !important;
-                width: 90vw !important;
+    .card {
+        width: auto;
+        flex-direction: row;
+        max-width: none;
+        padding-bottom: 10px;
+        align-items: center;
 
-                >.cardTextContainer .deleteButton {
-                    display: none;
-                }
+        img {
+            width: 101px;
+        }
+
+        .badgeContainer {
+            display: none;
+        }
+
+        .badge {
+            width: 70%;
+        }
+
+        .additionalText {
+            position: absolute;
+            bottom: 5px;
+            width: 90px;
+            right: 5px;
+        }
+
+        .cardTextContainer {
+            font-size: 10px;
+            padding: 0;
+            padding-left: 10px;
+
+            h2 {
+                font-size: 2.25em;
+            }
+
+            h3 {
+                font-size: 1.75em;
+            }
+
+            .unit {
+                font-size: 1.75em;
+            }
+
+            sup {
+                margin: 0;
             }
         }
 
-        #listControls {
-            order: 1;
-            flex-direction: row;
+        .save {
+            height: auto;
+            width: auto;
+            top: -9px;
+            right: auto;
+            left: -12px;
 
-            #scrollPrint {
+            p {
+                margin: 0;
+            }
+
+            span {
+                margin-right: 5px;
+            }
+
+            br {
                 display: none;
             }
+
+            .star {
+                clip-path: none;
+            }
         }
     }
+
+
 }

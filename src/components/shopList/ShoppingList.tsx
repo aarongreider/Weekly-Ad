@@ -68,10 +68,12 @@ function ShoppingList({ visible, printRef, closeList }: props) {
                 </DndContext>
             </div>
             <div id="listControls">
+                <span className="material-symbols-outlined button close" onClick={closeList}>close</span>
                 <span id="scrollPrint" className="material-symbols-outlined print" onClick={() => handlePrint(printRef)}>print</span>
                 <p id="totalButton">Total: $<span id="total">{total}</span></p>
+                
             </div>
-            <span className="material-symbols-outlined button close" onClick={closeList}>close</span>
+            
         </div>
 
     </>

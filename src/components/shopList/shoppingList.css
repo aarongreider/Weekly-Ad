@@ -26,9 +26,7 @@
   max-width: 450px;
   overflow: visible;
   position: relative;
-}
-.scrollContainer #listCardContainer > :last-child {
-  margin-bottom: 300px;
+  padding-bottom: 100px;
 }
 .scrollContainer #listControls {
   display: flex;
@@ -38,36 +36,14 @@
   gap: 11px;
   position: sticky;
   top: 0;
+  z-index: 1002;
 }
 .scrollContainer #listControls #scrollPrint {
   align-items: center;
   justify-content: center;
   background: #EDEAE7;
 }
-.scrollContainer .close {
-  position: absolute;
-  left: 20px;
-  width: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  color: rgba(0, 0, 0, 0.75);
-}
-
-.showCards {
-  display: flex !important;
-}
-
-.noScroll {
-  overflow: hidden;
-}
-
-.ghost {
-  opacity: 0.5;
-}
-
-#totalButton {
+.scrollContainer #listControls #totalButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,16 +64,34 @@
   font-style: normal;
   margin: 0;
   padding: 15px 10px;
-  height: auto;
+  height: 21px;
   color: black;
   font-weight: 600;
   text-transform: capitalize;
+}
+.scrollContainer #listControls .close {
+  position: relative;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.showCards {
+  display: flex !important;
+}
+
+.noScroll {
+  overflow: hidden;
 }
 
 .dragIcon {
   color: #C6BCB3;
   padding: 34px 0;
   cursor: grab;
+  touch-action: none;
 }
 
 @media only screen and (max-width: 600px) {
@@ -106,8 +100,9 @@
   }
   .scrollContainer {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
+    width: auto;
   }
   .scrollContainer #listCardContainer {
     order: 2;
@@ -116,42 +111,73 @@
   .scrollContainer #listControls {
     order: 1;
     flex-direction: row;
+    align-items: center;
   }
 }
-/* css selectors for printing */
-@media print {
-  body :not(.scrollContainer *):not(.scrollContainer) {
-    display: none !important;
+@media only screen and (max-width: 400px) {
+  .section {
+    justify-content: center;
   }
-  .scrollContainer {
-    display: flex;
+  .menuContainer {
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
-    overflow: visible;
-    background: white;
-    box-shadow: none;
   }
-  .scrollContainer #listCardContainer {
-    display: flex;
-    order: 2;
-    height: auto;
-    max-height: none;
-    width: 100vw;
-  }
-  .scrollContainer #listCardContainer .listCard {
-    background-color: white !important;
-    width: 90vw !important;
-  }
-  .scrollContainer #listCardContainer .listCard > .cardTextContainer .deleteButton {
-    display: none;
-  }
-  .scrollContainer #listControls {
-    order: 1;
+  .card {
+    width: auto;
     flex-direction: row;
+    max-width: none;
+    padding-bottom: 10px;
+    align-items: center;
   }
-  .scrollContainer #listControls #scrollPrint {
+  .card img {
+    width: 101px;
+  }
+  .card .badgeContainer {
     display: none;
+  }
+  .card .badge {
+    width: 70%;
+  }
+  .card .additionalText {
+    position: absolute;
+    bottom: 5px;
+    width: 90px;
+    right: 5px;
+  }
+  .card .cardTextContainer {
+    font-size: 10px;
+    padding: 0;
+    padding-left: 10px;
+  }
+  .card .cardTextContainer h2 {
+    font-size: 2.25em;
+  }
+  .card .cardTextContainer h3 {
+    font-size: 1.75em;
+  }
+  .card .cardTextContainer .unit {
+    font-size: 1.75em;
+  }
+  .card .cardTextContainer sup {
+    margin: 0;
+  }
+  .card .save {
+    height: auto;
+    width: auto;
+    top: -9px;
+    right: auto;
+    left: -12px;
+  }
+  .card .save p {
+    margin: 0;
+  }
+  .card .save span {
+    margin-right: 5px;
+  }
+  .card .save br {
+    display: none;
+  }
+  .card .save .star {
+    -webkit-clip-path: none;
+            clip-path: none;
   }
 }/*# sourceMappingURL=shoppingList.css.map */
