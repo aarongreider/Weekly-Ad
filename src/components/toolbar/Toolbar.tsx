@@ -46,13 +46,13 @@ function Toolbar({ sections, categories, printRef, groupSelect, openList }: prop
     return <>
         <div id='toolbar'>
             {/* SHOPPING LIST BUTTONS */}
-            <div tabIndex={0} className="header" onClick={openList}>
+            <div tabIndex={0} className="header" onClick={openList} style={{order: 3}}>
                 <span className="material-symbols-outlined listIcon">receipt_long</span>
                 <h1>View Shopping List</h1>
                 <span id="listCounter" className="button">{shoppingList.length}</span>
             </div>
 
-            <span tabIndex={0} className="material-symbols-outlined print" onClick={() => handlePrint(printRef)}>print</span>
+            <span tabIndex={0} className="material-symbols-outlined print" onClick={() => handlePrint(printRef)} style={{order: 4}}>print</span>
 
             {/* SECTION DROPDOWN */}
             <label htmlFor="sectionDropdown">Filter Section</label>
