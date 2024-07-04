@@ -27,9 +27,9 @@ export function AddButton({ item, menu }: props) {
                 <span className="material-symbols-outlined">read_more</span>See Related Items
             </p>
         }
-        <p className={`buttonInline add ${menu == 'parent' && 'lower'} ${checked && 'padding1'}`} onClick={() => { addItemToList(item); setChecked(true) }}>
+        <p className={`buttonInline add ${menu == 'parent' && 'lower'} ${(checked || window.innerWidth < 400) && 'padding1'}`} onClick={() => { addItemToList(item); setChecked(true) }}>
             {checked ? <span className="material-symbols-outlined">check_circle</span> : <>
-                <span className="material-symbols-outlined">add_circle</span>Add to List</>}
+                <span className="material-symbols-outlined">add_circle</span>{window.innerWidth > 400 && `Add to List`}</>}
         </p>
     </>
 }

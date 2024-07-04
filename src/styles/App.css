@@ -22,4 +22,8 @@ select {
   justify-content: center;
   align-items: center;
   gap: 60px;
+}
+
+.fullWidth .vc_column-inner {
+  padding: 0;
 }/*# sourceMappingURL=App.css.map */

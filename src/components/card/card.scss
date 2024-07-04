@@ -13,6 +13,7 @@
 	flex-grow: 1;
 	align-items: flex-start;
 	//gap: 10px;
+	color: black;
 
 
 	border-radius: 10px;
@@ -38,14 +39,13 @@
 		font-size: 16px;
 
 		>h2 {
-			//color: var(--dark-green, #0C5900);
 			font-family: $font-family-alt;
 			font-size: 1.5em;
 			font-style: normal;
 			font-weight: 700;
 			line-height: 100%;
 			//letter-spacing: .5px;
-
+			color: black;
 			margin: 0;
 		}
 

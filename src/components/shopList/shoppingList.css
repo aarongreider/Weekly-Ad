@@ -68,6 +68,7 @@
   color: black;
   font-weight: 600;
   text-transform: capitalize;
+  box-sizing: content-box;
 }
 .scrollContainer #listControls .close {
   position: relative;
@@ -142,6 +143,7 @@
     bottom: 5px;
     width: 90px;
     right: 5px;
+    text-align: right;
   }
   .card .cardTextContainer {
     font-size: 10px;
