@@ -61,7 +61,7 @@ function Toolbar({ sections, categories, printRef, groupSelect, openList }: prop
                 <p id="copycatSection">{activeSection.toLocaleLowerCase()}</p>
             </div>
 
-            <select id="sectionDropdown" ref={sectionDropdown} className="filterButton" style={{ width: `${sectionWidth}px` }}
+            <select id="sectionDropdown" ref={sectionDropdown} className="filterButton" style={{ width: `${sectionWidth}px` }} data-chosen-disable="true"
                 onChange={(event) => { handleChange(event, 'section') }}>
 
                 <option value="All Sections">All Sections</option>
@@ -77,7 +77,7 @@ function Toolbar({ sections, categories, printRef, groupSelect, openList }: prop
                 <p id="copycatCategory">{activeCategory.toLocaleLowerCase()}</p>
             </div>
 
-            <select id="categoryDropdown" ref={categoryDropdown} className="filterButton" style={{ width: `${categoryWidth}px` }}
+            <select id="categoryDropdown" ref={categoryDropdown} className="filterButton" style={{ width: `${categoryWidth}px` }} data-chosen-disable="true"
                 onChange={(event) => { handleChange(event, 'category') }}>
 
                 <option value="All Categories">All Categories</option>

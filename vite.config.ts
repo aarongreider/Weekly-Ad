@@ -5,4 +5,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: 'https://aaron.greider.org/Weekly-Ad/dist/',
   plugins: [react()],
+  build: {
+    output: {
+      hash: false,
+    },
+  },
 })
