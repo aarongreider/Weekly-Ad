@@ -55,6 +55,7 @@ function App() {
       let elements = document.getElementsByClassName(tag)
       Array.from(elements).forEach(element => {
         element.classList.remove(tag)
+        console.log(`REMOVING ${element}`)
       });
     });
   }, [])
