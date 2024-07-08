@@ -5,9 +5,13 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: 'https://aaron.greider.org/Weekly-Ad/dist/',
   plugins: [react()],
-  build: {
-    output: {
-      hash: false,
-    },
-  },
+/*   build: {
+    rollupOptions: {
+      output: {
+        dir: '/dist/assets/',
+        entryFileNames: 'script.js',
+        assetFileNames: 'style.css',
+      }
+    }
+  } */
 })

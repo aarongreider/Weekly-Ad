@@ -206,21 +206,30 @@
 
 
 .buttonInline {
-    @include buttonInline();
-    position: absolute;
-    right: -6px;
-    z-index: 1;
+	@include buttonInline();
+	position: absolute;
+	right: -6px;
+	z-index: 1;
 }
 
 .add {
-    top: -4px;
+	top: -4px;
 }
 
 .lower {
-    top: 30px;
+	top: 30px;
 }
 
 .padding1 {
 	padding: 1px;
 }
 
+
+
+@media only screen and (max-width: 400px) {
+	.priceContainer {
+		>div {
+			gap: 0;
+		}
+	}
+}

@@ -84,6 +84,8 @@
 }
 #toolbar select {
   text-transform: capitalize;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 #toolbar .copycat {
   position: absolute;
@@ -104,5 +106,14 @@
   #toolbar {
     left: 18px;
     gap: 8px;
+  }
+  #toolbar > * {
+    padding: 10px;
+  }
+  #toolbar *:not(.material-symbols-outlined) {
+    font-size: 16px;
+  }
+  .listIcon {
+    font-size: 30px;
   }
 }/*# sourceMappingURL=toolbar.css.map */
