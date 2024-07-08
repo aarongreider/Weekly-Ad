@@ -47,7 +47,18 @@ function App() {
       console.error('Fetch error:', error);
     }
   }, [])
-  
+
+  /* BRUTE FORCE CLEAR RANDOM ASS CLASSES GETTING ADDED FROM ROGUE JQUERY IN FIREFOX */
+  useEffect(() => {
+    let tags = ["jcf-select", "jcf-unselectable", "jcf-select-toolbarButton", "jcf-drop-active", "jcf-drop-flipped"]
+    tags.forEach(tag => {
+      let elements = document.getElementsByClassName(tag)
+      Array.from(elements).forEach(element => {
+        element.classList.remove(tag)
+      });
+    });
+  }, [])
+
 
   const handleGroupSelect = (group: string) => {
     if (group == "All Sections") {
@@ -94,6 +105,8 @@ function App() {
 
   return (
     <>
+      <span className="jcf-select jcf-unselectable jcf-select-toolbarButton jcf-drop-active jcf-drop-flipped"><span className="jcf-select-text"><span className="">All Categories</span></span><span className="jcf-select-opener"></span></span>
+
       <div id="ad" >
         <ShoppingList visible={listIsOpen} printRef={printRef} closeList={handleToggleList}></ShoppingList>
         {activeGroup && Object.entries(activeGroup).map((group, index) => {
