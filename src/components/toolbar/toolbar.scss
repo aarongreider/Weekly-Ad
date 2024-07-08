@@ -100,13 +100,29 @@
         text-transform: capitalize;
         -moz-appearance: none;
         -webkit-appearance: none;
+        appearance: none;
+        border: none;
+        background: none;
+    }
+
+    .filterButton {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        .material-symbols-outlined {
+            transform: rotate(180deg);
+            font-weight: 500;
+            margin: 0 -6px;
+        }
     }
 
     .copycat {
-        position: absolute;
+        //position: absolute;
         left: -99999px;
         width: auto;
         //top: -20px;
+        text-transform: capitalize;
     }
 
 

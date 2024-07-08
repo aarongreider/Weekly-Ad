@@ -86,11 +86,24 @@
   text-transform: capitalize;
   -moz-appearance: none;
   -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: none;
+}
+#toolbar .filterButton {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+#toolbar .filterButton .material-symbols-outlined {
+  transform: rotate(180deg);
+  font-weight: 500;
+  margin: 0 -6px;
 }
 #toolbar .copycat {
-  position: absolute;
   left: -99999px;
   width: auto;
+  text-transform: capitalize;
 }
 
 .button {

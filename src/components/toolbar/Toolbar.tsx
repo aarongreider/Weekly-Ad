@@ -38,21 +38,21 @@ function Toolbar({ sections, categories, printRef, groupSelect, openList }: prop
 
     useEffect(() => {
         // when active group changes, sync width of the correct select with the copycat's width
-        sectionCopycat.current && setSectionWidth(sectionCopycat.current.offsetWidth + 30)
-        categoryCopycat.current && setCategoryWidth(categoryCopycat.current.offsetWidth + 30)
+        sectionCopycat.current && setSectionWidth(sectionCopycat.current.offsetWidth)
+        categoryCopycat.current && setCategoryWidth(categoryCopycat.current.offsetWidth)
     }, [activeCategory, activeSection])
 
 
     return <>
         <div id='toolbar'>
             {/* SHOPPING LIST BUTTONS */}
-            <div tabIndex={0} className="header" onClick={openList} style={{order: 3}}>
+            <div tabIndex={0} className="header" onClick={openList} style={{ order: 3 }}>
                 <span className="material-symbols-outlined listIcon">receipt_long</span>
                 <h1>View Shopping List</h1>
                 <span id="listCounter" className="button">{shoppingList.length}</span>
             </div>
 
-            <span tabIndex={0} className="material-symbols-outlined print" onClick={() => handlePrint(printRef)} style={{order: 4}}>print</span>
+            <span tabIndex={0} className="material-symbols-outlined print" onClick={() => handlePrint(printRef)} style={{ order: 4 }}>print</span>
 
             {/* SECTION DROPDOWN */}
             <label htmlFor="sectionDropdown">Filter Section</label>
@@ -73,18 +73,30 @@ function Toolbar({ sections, categories, printRef, groupSelect, openList }: prop
             {/* CATEGORY DROPDOWN */}
             <label htmlFor="categoryDropdown">Filter Category</label>
 
-            <div className="copycat" ref={categoryCopycat}>
-                <p id="copycatCategory">{activeCategory.toLocaleLowerCase()}</p>
+            <div className="copycat" >
+                <p ref={categoryCopycat} id="copycatCategory">{activeCategory.toLocaleLowerCase()}</p>
             </div>
 
-            <select id="categoryDropdown" ref={categoryDropdown} className="filterButton" style={{ width: `${categoryWidth}px` }} data-chosen-disable="true"
-                onChange={(event) => { handleChange(event, 'category') }}>
-
-                <option value="All Categories">All Categories</option>
-                {categories.map((category, index) => {
-                    return <option key={index} value={category}>{category.toLowerCase()}</option>
-                })}
-            </select>
+            <div className="filterButton" style={{ width: `${categoryWidth && categoryWidth + 30}px` }}
+                onClick={(event) => {
+                    console.log(event);
+                    const target = event.target as HTMLElement;
+                    const select = target.querySelector('select');
+                    if (select) {
+                        console.log(select)
+                        select.focus()
+                        select.click()
+                    }
+                }}>
+                <select id="categoryDropdown" ref={categoryDropdown} data-chosen-disable="true" style={{ width: `${categoryWidth && categoryWidth}px` }}
+                    onChange={(event) => { handleChange(event, 'category') }}>
+                    <option value="All Categories">All Categories</option>
+                    {categories.map((category, index) => {
+                        return <option key={index} value={category}>{category.toLowerCase()}</option>
+                    })}
+                </select>
+                <span className="material-symbols-outlined">keyboard_arrow_up</span>
+            </div>
         </div>
     </>
 }
