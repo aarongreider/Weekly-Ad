@@ -36,7 +36,7 @@
   letter-spacing: -0.8px;
   margin: 0;
 }
-#toolbar > * {
+#toolbar .toolbarButton {
   padding: 14px;
   z-index: 1001;
   /* style */
@@ -90,17 +90,27 @@
   border: none;
   background: none;
 }
-#toolbar .filterButton {
-  display: flex;
+#toolbar .filter {
+  /* display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 10px; */
+  position: relative;
 }
-#toolbar .filterButton .material-symbols-outlined {
+#toolbar .filter .material-symbols-outlined {
+  pointer-events: none;
   transform: rotate(180deg);
   font-weight: 500;
-  margin: 0 -6px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #toolbar .copycat {
+  position: absolute;
   left: -99999px;
   width: auto;
   text-transform: capitalize;
@@ -128,5 +138,12 @@
   }
   .listIcon {
     font-size: 30px;
+  }
+  .filter {
+    padding: 0 !important;
+  }
+  .filter .material-symbols-outlined {
+    font-size: 20px;
+    right: 7% !important;
   }
 }/*# sourceMappingURL=toolbar.css.map */

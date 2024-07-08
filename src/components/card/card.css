@@ -8,7 +8,7 @@
   flex-direction: column;
   flex-grow: 1;
   align-items: flex-start;
-  color: black;
+  color: black !important;
   border-radius: 10px;
   background: var(--offwhite, #EDEAE7);
   /* Soft Drop */
