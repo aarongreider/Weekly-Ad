@@ -1,4 +1,4 @@
-#ad .section {
+#root .section {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -10,14 +10,14 @@
   background: #EDEAE7;
   box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.3) inset;
 }
-#ad .sectionHeader {
+#root .sectionHeader {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   z-index: 0;
 }
-#ad .sectionHeader .title {
+#root .sectionHeader .title {
   width: auto;
   height: auto;
   text-align: center;
@@ -29,12 +29,12 @@
   color: white;
   margin: 20px 0px !important;
 }
-#ad .taglineContainer {
+#root .taglineContainer {
   position: relative;
   left: calc((16px + 5 * (100vw - 320px) / 400) * -1 - 24px);
   z-index: 1;
 }
-#ad .taglineContainer .tagline {
+#root .taglineContainer .tagline {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,7 +48,7 @@
   box-shadow: 2px 13px 21px 0px rgba(0, 0, 0, 0.15), 1px 6px 8px 0px rgba(0, 0, 0, 0.25), 1px 1px 4px 0px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
 }
-#ad .taglineContainer .overhang {
+#root .taglineContainer .overhang {
   position: absolute;
   top: 12px;
   width: 24px;
@@ -59,7 +59,7 @@
   border-radius: 0 0 0 10px;
   filter: drop-shadow(2px 2px 2px rgba(50, 50, 0, 0.35));
 }
-#ad .headerImg {
+#root .headerImg {
   width: 320px;
   top: 0;
   right: 0;
@@ -69,7 +69,7 @@
   pointer-events: none;
 }
 @media only screen and (max-width: 600px) {
-  #ad .headerImg {
+  #root .headerImg {
     display: none;
   }
 }/*# sourceMappingURL=section.css.map */

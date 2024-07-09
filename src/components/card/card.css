@@ -74,10 +74,12 @@
 .card > .cardTextContainer .specialtyAmnt {
   font-size: 1.5em;
   line-height: 100%;
-  height: 100%;
   display: flex;
   align-items: flex-end;
   flex-direction: row;
+}
+.card > .cardTextContainer .specialtyAmnt p {
+  margin: 1.3em -0.2em 1.3em 0;
 }
 .card > .cardTextContainer .specialtyAmnt span {
   font-size: 1.75em;
@@ -119,6 +121,7 @@
   position: relative;
   text-align: center;
   line-height: 100%;
+  margin: 0;
 }
 .save span {
   color: red;
@@ -146,7 +149,7 @@
   flex-direction: row;
   flex-wrap: nowrap;
   color: #000;
-  margin: -0.85em 0 0 0;
+  margin: -0.85em 0 -11px;
   /* typography */
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-style: normal;
@@ -207,5 +210,67 @@
 @media only screen and (max-width: 400px) {
   .priceContainer > div {
     gap: 0;
+  }
+  .card {
+    width: auto !important;
+    flex-direction: row;
+    max-width: none;
+    align-items: center;
+  }
+  .card img {
+    width: 101px;
+  }
+  .card .badgeContainer {
+    display: none;
+  }
+  .card .badge {
+    width: 70%;
+  }
+  .card .additionalText {
+    position: absolute;
+    bottom: 5px;
+    width: 90px;
+    right: 5px;
+    text-align: right;
+  }
+  .card .cardTextContainer {
+    font-size: 10px;
+    padding: 0;
+    padding-left: 10px;
+  }
+  .card .cardTextContainer h2 {
+    font-size: 2.25em;
+  }
+  .card .cardTextContainer h3 {
+    font-size: 1.75em;
+  }
+  .card .cardTextContainer .unit {
+    font-size: 1.75em;
+  }
+  .card .cardTextContainer sup {
+    margin: 0;
+  }
+  .card .cardTextContainer .specialtyAmnt p {
+    margin: 0 -0.2em 0.7em 0;
+  }
+  .card .save {
+    height: auto;
+    width: auto;
+    top: -9px;
+    right: auto;
+    left: -12px;
+  }
+  .card .save p {
+    margin: 0;
+  }
+  .card .save span {
+    margin-right: 5px;
+  }
+  .card .save br {
+    display: none;
+  }
+  .card .save .star {
+    -webkit-clip-path: none;
+            clip-path: none;
   }
 }/*# sourceMappingURL=card.css.map */

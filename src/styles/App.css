@@ -1,4 +1,4 @@
-#ad {
+#root {
   width: auto;
   display: flex;
   flex-direction: column;
@@ -6,20 +6,21 @@
   align-items: center;
   gap: 60px;
 }
-#ad h1,
-#ad h2,
-#ad h3,
-#ad h4,
-#ad a {
+#root h1,
+#root h2,
+#root h3,
+#root h4,
+#root a {
   color: black;
 }
-#ad h1 {
+#root h1 {
+  font-family: "myriad-pro-semi-condensed", sans-serif;
   font-size: calc(24px + 6 * (100vw - 320px) / 680);
   font-weight: 900;
 }
-#ad select {
+#root select {
   height: auto !important;
 }
-#ad .fullWidth .vc_column-inner {
+#root .fullWidth .vc_column-inner {
   padding: 0;
 }/*# sourceMappingURL=App.css.map */

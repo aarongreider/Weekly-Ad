@@ -1,4 +1,4 @@
-#ad .print {
+#root .print {
   padding: 14px;
   z-index: 1001;
   border-radius: 12px;
@@ -10,7 +10,7 @@
   backdrop-filter: blur(32px);
   color: rgba(0, 0, 0, 0.75);
 }
-#ad #toolbar {
+#root #toolbar {
   /* layout */
   position: fixed;
   width: auto;
@@ -23,10 +23,10 @@
   flex-direction: row;
   gap: 14px;
 }
-#ad #toolbar * {
+#root #toolbar * {
   color: rgba(0, 0, 0, 0.75);
 }
-#ad #toolbar *:not(.material-symbols-outlined) {
+#root #toolbar *:not(.material-symbols-outlined) {
   font-family: "SF Pro Display", sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -35,7 +35,7 @@
   letter-spacing: -0.8px;
   margin: 0;
 }
-#ad #toolbar .toolbarButton {
+#root #toolbar .toolbarButton {
   padding: 14px;
   z-index: 1001;
   /* style */
@@ -48,7 +48,7 @@
   -webkit-backdrop-filter: blur(32px);
           backdrop-filter: blur(32px);
 }
-#ad #toolbar .header {
+#root #toolbar .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -57,7 +57,7 @@
   width: auto;
   position: relative;
 }
-#ad #toolbar .header #listCounter {
+#root #toolbar .header #listCounter {
   position: absolute;
   top: -13px;
   right: -12px;
@@ -74,14 +74,14 @@
   font-family: "myriad-pro-semi-condensed", sans-serif;
   font-weight: 300;
 }
-#ad #toolbar .header .listIcon {
+#root #toolbar .header .listIcon {
   font-size: 32px;
   line-height: 0;
 }
-#ad #toolbar label {
+#root #toolbar label {
   display: none;
 }
-#ad #toolbar select {
+#root #toolbar select {
   text-transform: capitalize;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -89,14 +89,14 @@
   border: none;
   background: none;
 }
-#ad #toolbar .filter {
+#root #toolbar .filter {
   /* display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px; */
   position: relative;
 }
-#ad #toolbar .filter .material-symbols-outlined {
+#root #toolbar .filter .material-symbols-outlined {
   pointer-events: none;
   transform: rotate(180deg);
   font-weight: 500;
@@ -108,13 +108,13 @@
   align-items: center;
   justify-content: center;
 }
-#ad #toolbar .copycat {
+#root #toolbar .copycat {
   position: absolute;
   left: -99999px;
   width: auto;
   text-transform: capitalize;
 }
-#ad .button {
+#root .button {
   /* style */
   border-radius: 200px;
   border: 3px solid #C6BCB3;
@@ -123,23 +123,23 @@
   cursor: pointer;
 }
 @media only screen and (max-width: 400px) {
-  #ad #toolbar {
+  #root #toolbar {
     left: 18px;
     gap: 8px;
   }
-  #ad #toolbar > * {
+  #root #toolbar > * {
     padding: 10px;
   }
-  #ad #toolbar *:not(.material-symbols-outlined) {
+  #root #toolbar *:not(.material-symbols-outlined) {
     font-size: 16px;
   }
-  #ad .listIcon {
+  #root .listIcon {
     font-size: 30px;
   }
-  #ad .filter {
+  #root .filter {
     padding: 0 !important;
   }
-  #ad .filter .material-symbols-outlined {
+  #root .filter .material-symbols-outlined {
     font-size: 20px;
     right: 7% !important;
   }

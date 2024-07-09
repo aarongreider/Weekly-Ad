@@ -1,4 +1,4 @@
-#ad .scrollContainer {
+#root .scrollContainer {
   /* layout */
   align-items: flex-start;
   justify-content: center;
@@ -19,7 +19,7 @@
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
 }
-#ad .scrollContainer #listCardContainer {
+#root .scrollContainer #listCardContainer {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -28,7 +28,7 @@
   position: relative;
   padding-bottom: 100px;
 }
-#ad .scrollContainer #listControls {
+#root .scrollContainer #listControls {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -38,12 +38,12 @@
   top: 0;
   z-index: 1002;
 }
-#ad .scrollContainer #listControls #scrollPrint {
+#root .scrollContainer #listControls #scrollPrint {
   align-items: center;
   justify-content: center;
   background: #EDEAE7;
 }
-#ad .scrollContainer #listControls #totalButton {
+#root .scrollContainer #listControls #totalButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,7 +70,7 @@
   text-transform: capitalize;
   box-sizing: content-box;
 }
-#ad .scrollContainer #listControls .close {
+#root .scrollContainer #listControls .close {
   position: relative;
   width: 40px;
   display: flex;
@@ -80,13 +80,13 @@
   color: rgba(0, 0, 0, 0.75);
   opacity: 1;
 }
-#ad .showCards {
+#root .showCards {
   display: flex !important;
 }
-#ad .noScroll {
+#root .noScroll {
   overflow: hidden;
 }
-#ad .dragIcon {
+#root .dragIcon {
   color: #C6BCB3;
   cursor: grab;
   touch-action: none;
@@ -94,90 +94,32 @@
   padding: 10% 10%;
   right: -7%;
 }
+
 @media only screen and (max-width: 600px) {
-  #ad .card {
+  .card {
     width: 140px;
   }
-  #ad .scrollContainer {
+  .scrollContainer {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: auto;
   }
-  #ad .scrollContainer #listCardContainer {
+  .scrollContainer #listCardContainer {
     order: 2;
     width: 92vw;
   }
-  #ad .scrollContainer #listControls {
+  .scrollContainer #listControls {
     order: 1;
     flex-direction: row;
     align-items: center;
   }
 }
 @media only screen and (max-width: 400px) {
-  #ad .section {
+  .section {
     justify-content: center;
   }
-  #ad .menuContainer {
+  .menuContainer {
     flex-direction: column;
-  }
-  #ad .card {
-    width: auto;
-    flex-direction: row;
-    max-width: none;
-    align-items: center;
-  }
-  #ad .card img {
-    width: 101px;
-  }
-  #ad .card .badgeContainer {
-    display: none;
-  }
-  #ad .card .badge {
-    width: 70%;
-  }
-  #ad .card .additionalText {
-    position: absolute;
-    bottom: 5px;
-    width: 90px;
-    right: 5px;
-    text-align: right;
-  }
-  #ad .card .cardTextContainer {
-    font-size: 10px;
-    padding: 0;
-    padding-left: 10px;
-  }
-  #ad .card .cardTextContainer h2 {
-    font-size: 2.25em;
-  }
-  #ad .card .cardTextContainer h3 {
-    font-size: 1.75em;
-  }
-  #ad .card .cardTextContainer .unit {
-    font-size: 1.75em;
-  }
-  #ad .card .cardTextContainer sup {
-    margin: 0;
-  }
-  #ad .card .save {
-    height: auto;
-    width: auto;
-    top: -9px;
-    right: auto;
-    left: -12px;
-  }
-  #ad .card .save p {
-    margin: 0;
-  }
-  #ad .card .save span {
-    margin-right: 5px;
-  }
-  #ad .card .save br {
-    display: none;
-  }
-  #ad .card .save .star {
-    -webkit-clip-path: none;
-            clip-path: none;
   }
 }/*# sourceMappingURL=shoppingList.css.map */

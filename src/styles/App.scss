@@ -1,7 +1,7 @@
 @import './variables';
 @import './mixins';
 
-#ad {
+#root {
     width: auto;
     display: flex;
     flex-direction: column;
@@ -14,12 +14,13 @@
     h3,
     h4,
     a {
+        
         color: black;
     }
 
     h1 {
+        font-family: $font-family;
         font-size: calc(24px + 6 * ((100vw - 320px) / 680));
-
         font-weight: 900;
     }
 

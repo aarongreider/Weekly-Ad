@@ -1,7 +1,7 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
 
-#ad {
+#root {
     .scrollContainer {
         /* layout */
         align-items: flex-start;
@@ -104,112 +104,38 @@
         right: -7%;
     }
 
-    @media only screen and (max-width: 600px) {
-        .card {
-            width: 140px;
-        }
+}
 
-        .scrollContainer {
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            width: auto;
-
-            #listCardContainer {
-                order: 2;
-                width: 92vw;
-            }
-
-            #listControls {
-                order: 1;
-                flex-direction: row;
-                align-items: center;
-            }
-        }
+@media only screen and (max-width: 600px) {
+    .card {
+        width: 140px;
     }
 
-    @media only screen and (max-width: 400px) {
-        .section {
-            justify-content: center;
+    .scrollContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: auto;
+
+        #listCardContainer {
+            order: 2;
+            width: 92vw;
         }
 
-        .menuContainer {
-            flex-direction: column;
-        }
-
-        .card {
-            width: auto;
+        #listControls {
+            order: 1;
             flex-direction: row;
-            max-width: none;
             align-items: center;
-
-            img {
-                width: 101px;
-            }
-
-            .badgeContainer {
-                display: none;
-            }
-
-            .badge {
-                width: 70%;
-            }
-
-            .additionalText {
-                position: absolute;
-                bottom: 5px;
-                width: 90px;
-                right: 5px;
-                text-align: right;
-            }
-
-            .cardTextContainer {
-                font-size: 10px;
-                padding: 0;
-                padding-left: 10px;
-
-                h2 {
-                    font-size: 2.25em;
-                }
-
-                h3 {
-                    font-size: 1.75em;
-                }
-
-                .unit {
-                    font-size: 1.75em;
-                }
-
-                sup {
-                    margin: 0;
-                }
-            }
-
-            .save {
-                height: auto;
-                width: auto;
-                top: -9px;
-                right: auto;
-                left: -12px;
-
-                p {
-                    margin: 0;
-                }
-
-                span {
-                    margin-right: 5px;
-                }
-
-                br {
-                    display: none;
-                }
-
-                .star {
-                    clip-path: none;
-                }
-            }
         }
+    }
+}
 
+@media only screen and (max-width: 400px) {
+    .section {
+        justify-content: center;
+    }
 
+    .menuContainer {
+        flex-direction: column;
     }
 }

@@ -44,13 +44,13 @@ function PriceWidget({ price, priceDisplay, unit }: props) {
         </div> : hasPercent ? <div className="priceContainer">
             <p className="percentOff">{price}</p>
         </div> : <div className="priceContainer">
-            {quantity ? <div className="specialtyAmnt" style={quantity > 9 ? { marginRight: '7px', textAlign: 'right', fontSize: '21px' } : undefined}><p><span>{quantity}</span><br />FOR</p></div> : undefined}
+            {quantity ? <div className="specialtyAmnt" style={quantity > 9 ? { marginRight: '.3em', textAlign: 'right', /* fontSize: '21px' */ } : undefined}><p><span>{quantity}</span><br />FOR</p></div> : undefined}
             {belowOne ? undefined : <sup style={{ marginTop: '.25em' }}>$</sup>}
             <p className="dollar">{belowOne ? cents : dollars}</p>
             <div>
                 {!belowOne && cents != 0 ? <sup>{cents}</sup> : undefined}
                 {belowOne ? <sup>¢</sup> : undefined}
-                {priceDisplay == "BY WEIGHT" ? <p className="unit" style={{ margin: ' 0 4px' }}>{unit}</p> : undefined}
+                {priceDisplay == "BY WEIGHT" ? <p className="unit" style={{ margin: ' 0 .2em' }}>{unit}</p> : undefined}
             </div>
         </div >}
     </>

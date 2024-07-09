@@ -91,10 +91,14 @@
 		.specialtyAmnt {
 			font-size: 1.5em;
 			line-height: 100%;
-			height: 100%;
+			//height: 100%;
 			display: flex;
 			align-items: flex-end;
 			flex-direction: row;
+
+			p {
+				margin: 1.3em -.2em 1.3em 0;
+			}
 
 			span {
 				font-size: 1.75em;
@@ -149,6 +153,7 @@
 		position: relative;
 		text-align: center;
 		line-height: 100%;
+		margin: 0;
 	}
 
 	span {
@@ -179,7 +184,7 @@
 	flex-wrap: nowrap;
 
 	color: #000;
-	margin: -.85em 0 0 0;
+	margin: -.85em 0 -11px;
 	/* typography */
 	font-family: $font-family-bold;
 	font-style: normal;
@@ -198,8 +203,6 @@
 		font-family: $font-family-alt;
 		font-weight: 500;
 	}
-
-
 }
 
 
@@ -232,4 +235,85 @@
 			gap: 0;
 		}
 	}
+
+    .card {
+        width: auto !important;
+        flex-direction: row;
+        max-width: none;
+        align-items: center;
+
+        img {
+            width: 101px;
+        }
+
+        .badgeContainer {
+            display: none;
+        }
+
+        .badge {
+            width: 70%;
+        }
+
+        .additionalText {
+            position: absolute;
+            bottom: 5px;
+            width: 90px;
+            right: 5px;
+            text-align: right;
+        }
+
+        .cardTextContainer {
+            font-size: 10px;
+            padding: 0;
+            padding-left: 10px;
+
+            h2 {
+                font-size: 2.25em;
+            }
+
+            h3 {
+                font-size: 1.75em;
+            }
+
+            .unit {
+                font-size: 1.75em;
+            }
+
+            sup {
+                margin: 0;
+            }
+
+			.specialtyAmnt {
+				p {
+					margin: 0 -0.2em .7em 0;
+				}
+			}
+        }
+
+        .save {
+            height: auto;
+            width: auto;
+            top: -9px;
+            right: auto;
+            left: -12px;
+
+            p {
+                margin: 0;
+            }
+
+            span {
+                margin-right: 5px;
+            }
+
+            br {
+                display: none;
+            }
+
+            .star {
+                clip-path: none;
+            }
+        }
+    }
+
+
 }

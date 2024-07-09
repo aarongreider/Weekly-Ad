@@ -34,7 +34,7 @@
   flex-grow: 1;
 }
 .card--shop > .cardTextContainer > h2 {
-  color: #0C5900;
+  color: #0C5900 !important;
   font-family: "myriad-pro-semi-condensed", sans-serif;
   font-size: 20px;
   font-style: normal;
