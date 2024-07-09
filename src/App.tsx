@@ -50,21 +50,22 @@ function App() {
 
   /* BRUTE FORCE CLEAR RANDOM ASS CLASSES GETTING ADDED FROM ROGUE JQUERY IN FIREFOX */
   useEffect(() => {
-    let tags = ["jcf-hidden"]
-    tags.forEach(tag => {
-      let elements = document.getElementsByClassName(tag)
-      Array.from(elements).forEach(element => {
-        element.classList.remove(tag)
-        console.log(`REMOVING ${element.outerHTML}`)
-      });
-    });
-
-    tags = ["jcf-select", "jcf-unselectable", "jcf-select-toolbarButton", "jcf-drop-active", "jcf-drop-flipped"]
+    console.log('v 1.0')
+    let  tags = ["jcf-select", "jcf-unselectable", "jcf-select-toolbarButton", "jcf-drop-active", "jcf-drop-flipped, jcf-select-opener, jcf-select-text"]
     tags.forEach(tag => {
       let elements = document.getElementsByClassName(tag)
       Array.from(elements).forEach(element => {
         element.remove()
         console.log(`DELETING ${element.outerHTML}`)
+      });
+    });
+
+    tags = ["jcf-hidden"]
+    tags.forEach(tag => {
+      let elements = document.getElementsByClassName(tag)
+      Array.from(elements).forEach(element => {
+        element.classList.remove(tag)
+        console.log(`REMOVING ${tag} from ${element.outerHTML}`)
       });
     });
   }, [])
