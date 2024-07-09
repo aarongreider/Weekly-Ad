@@ -62,7 +62,7 @@ function Toolbar({ sections, categories, printRef, groupSelect, openList }: prop
             </div>
 
             <div className="filter">
-                <select id="sectionDropdown" className="toolbarButton" ref={sectionDropdown} style={{ width: `${sectionWidth && sectionWidth + 20}px` }}
+                <select id="sectionDropdown" className="toolbarButton jcf-ignore" ref={sectionDropdown} style={{ width: `${sectionWidth && sectionWidth + 20}px` }}
                     onChange={(event) => { handleChange(event, 'section') }}>
                     <option value="All Sections">All Sections</option>
                     {sections.map((section, index) => {
@@ -80,7 +80,7 @@ function Toolbar({ sections, categories, printRef, groupSelect, openList }: prop
             </div>
 
             <div className="filter">
-                <select id="categoryDropdown" className="toolbarButton" ref={categoryDropdown} style={{ width: `${categoryWidth && categoryWidth + 20}px` }}
+                <select id="categoryDropdown" className="toolbarButton jcf-ignore" ref={categoryDropdown} style={{ width: `${categoryWidth && categoryWidth + 20}px` }}
                     onChange={(event) => { handleChange(event, 'category') }}>
                     <option value="All Categories">All Categories</option>
                     {categories.map((category, index) => {
