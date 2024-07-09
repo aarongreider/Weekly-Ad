@@ -41,6 +41,7 @@ function CardShop({ item }: props) {
                 </div>
             </div>
             <span className="material-symbols-outlined dragIcon" {...listeners}>drag_indicator</span>
+            <span style={{width: '24px', height: '24px'}}></span>
         </div>
     </>
 }

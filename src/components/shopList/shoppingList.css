@@ -91,9 +91,11 @@
 
 .dragIcon {
   color: #C6BCB3;
-  padding: 34px 0;
   cursor: grab;
   touch-action: none;
+  position: absolute;
+  padding: 10% 10%;
+  right: -7%;
 }
 
 @media only screen and (max-width: 600px) {

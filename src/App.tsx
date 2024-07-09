@@ -23,7 +23,7 @@ function App() {
 
   /* LOAD AD DATA */
   useEffect(() => {
-    console.log("Loading ad data v1.2");
+    console.log("Loading ad data v1.3");
     try {
       fetch(API_URL)
         .then(response => {
