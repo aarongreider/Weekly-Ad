@@ -23,7 +23,7 @@ function App() {
 
   /* LOAD AD DATA */
   useEffect(() => {
-    console.log("Loading ad data");
+    console.log("Loading ad data v1.2");
     try {
       fetch(API_URL)
         .then(response => {
@@ -47,29 +47,6 @@ function App() {
       console.error('Fetch error:', error);
     }
   }, [])
-
-  /* BRUTE FORCE CLEAR RANDOM ASS CLASSES GETTING ADDED FROM ROGUE JQUERY IN FIREFOX */
-  useEffect(() => {
-    console.log('v 1.0')
-    let  tags = ["jcf-select", "jcf-unselectable", "jcf-select-toolbarButton", "jcf-drop-active", "jcf-drop-flipped, jcf-select-opener, jcf-select-text"]
-    tags.forEach(tag => {
-      let elements = document.getElementsByClassName(tag)
-      Array.from(elements).forEach(element => {
-        element.remove()
-        console.log(`DELETING ${element.outerHTML}`)
-      });
-    });
-
-    tags = ["jcf-hidden"]
-    tags.forEach(tag => {
-      let elements = document.getElementsByClassName(tag)
-      Array.from(elements).forEach(element => {
-        element.classList.remove(tag)
-        console.log(`REMOVING ${tag} from ${element.outerHTML}`)
-      });
-    });
-  }, [])
-
 
   const handleGroupSelect = (group: string) => {
     if (group == "All Sections") {
@@ -116,9 +93,7 @@ function App() {
 
   return (
     <>
-      <span className="jcf-select jcf-unselectable jcf-select-toolbarButton jcf-drop-active jcf-drop-flipped"><span className="jcf-select-text"><span className="">All Categories</span></span><span className="jcf-select-opener"></span></span>
-
-      <div id="ad" >
+      <div id="ad" className='jcf-ignore' >
         <ShoppingList visible={listIsOpen} printRef={printRef} closeList={handleToggleList}></ShoppingList>
         {activeGroup && Object.entries(activeGroup).map((group, index) => {
           return <SectionContainer key={index} sectionProducts={group} sectionTitle={group[0]} tagline={group[1][0][AD_ITEM_KEYS.tagline]}></SectionContainer>
