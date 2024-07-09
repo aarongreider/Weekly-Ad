@@ -55,7 +55,7 @@ function App() {
       let elements = document.getElementsByClassName(tag)
       Array.from(elements).forEach(element => {
         element.classList.remove(tag)
-        console.log(`REMOVING ${element}`)
+        console.log(`REMOVING ${element.outerHTML}`)
       });
     });
 
@@ -64,7 +64,7 @@ function App() {
       let elements = document.getElementsByClassName(tag)
       Array.from(elements).forEach(element => {
         element.remove()
-        console.log(`DELETING ${element}`)
+        console.log(`DELETING ${element.outerHTML}`)
       });
     });
   }, [])
