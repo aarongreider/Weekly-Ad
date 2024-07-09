@@ -229,7 +229,7 @@
   .card .additionalText {
     position: absolute;
     bottom: 5px;
-    width: 90px;
+    max-width: 90px;
     right: 5px;
     text-align: right;
   }
