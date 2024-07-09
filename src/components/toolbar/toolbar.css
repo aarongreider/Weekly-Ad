@@ -1,4 +1,4 @@
-.print {
+#ad .print {
   padding: 14px;
   z-index: 1001;
   border-radius: 12px;
@@ -10,8 +10,7 @@
   backdrop-filter: blur(32px);
   color: rgba(0, 0, 0, 0.75);
 }
-
-#toolbar {
+#ad #toolbar {
   /* layout */
   position: fixed;
   width: auto;
@@ -24,10 +23,10 @@
   flex-direction: row;
   gap: 14px;
 }
-#toolbar * {
+#ad #toolbar * {
   color: rgba(0, 0, 0, 0.75);
 }
-#toolbar *:not(.material-symbols-outlined) {
+#ad #toolbar *:not(.material-symbols-outlined) {
   font-family: "SF Pro Display", sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -36,7 +35,7 @@
   letter-spacing: -0.8px;
   margin: 0;
 }
-#toolbar .toolbarButton {
+#ad #toolbar .toolbarButton {
   padding: 14px;
   z-index: 1001;
   /* style */
@@ -49,7 +48,7 @@
   -webkit-backdrop-filter: blur(32px);
           backdrop-filter: blur(32px);
 }
-#toolbar .header {
+#ad #toolbar .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -58,7 +57,7 @@
   width: auto;
   position: relative;
 }
-#toolbar .header #listCounter {
+#ad #toolbar .header #listCounter {
   position: absolute;
   top: -13px;
   right: -12px;
@@ -75,14 +74,14 @@
   font-family: "myriad-pro-semi-condensed", sans-serif;
   font-weight: 300;
 }
-#toolbar .header .listIcon {
+#ad #toolbar .header .listIcon {
   font-size: 32px;
   line-height: 0;
 }
-#toolbar label {
+#ad #toolbar label {
   display: none;
 }
-#toolbar select {
+#ad #toolbar select {
   text-transform: capitalize;
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -90,14 +89,14 @@
   border: none;
   background: none;
 }
-#toolbar .filter {
+#ad #toolbar .filter {
   /* display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px; */
   position: relative;
 }
-#toolbar .filter .material-symbols-outlined {
+#ad #toolbar .filter .material-symbols-outlined {
   pointer-events: none;
   transform: rotate(180deg);
   font-weight: 500;
@@ -109,14 +108,13 @@
   align-items: center;
   justify-content: center;
 }
-#toolbar .copycat {
+#ad #toolbar .copycat {
   position: absolute;
   left: -99999px;
   width: auto;
   text-transform: capitalize;
 }
-
-.button {
+#ad .button {
   /* style */
   border-radius: 200px;
   border: 3px solid #C6BCB3;
@@ -124,25 +122,24 @@
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25), 0px 1px 2px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
-
 @media only screen and (max-width: 400px) {
-  #toolbar {
+  #ad #toolbar {
     left: 18px;
     gap: 8px;
   }
-  #toolbar > * {
+  #ad #toolbar > * {
     padding: 10px;
   }
-  #toolbar *:not(.material-symbols-outlined) {
+  #ad #toolbar *:not(.material-symbols-outlined) {
     font-size: 16px;
   }
-  .listIcon {
+  #ad .listIcon {
     font-size: 30px;
   }
-  .filter {
+  #ad .filter {
     padding: 0 !important;
   }
-  .filter .material-symbols-outlined {
+  #ad .filter .material-symbols-outlined {
     font-size: 20px;
     right: 7% !important;
   }

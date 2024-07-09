@@ -1,20 +1,3 @@
-h1,
-h2,
-h3,
-h4,
-a {
-  font-family: "myriad-pro-semi-condensed", sans-serif;
-}
-
-h1 {
-  font-size: calc(24px + 6 * (100vw - 320px) / 680);
-  font-weight: 900;
-}
-
-select {
-  height: auto !important;
-}
-
 #ad {
   width: auto;
   display: flex;
@@ -23,7 +6,21 @@ select {
   align-items: center;
   gap: 60px;
 }
-
-.fullWidth .vc_column-inner {
+#ad h1,
+#ad h2,
+#ad h3,
+#ad h4,
+#ad a {
+  font-family: "myriad-pro-semi-condensed", sans-serif;
+  color: black;
+}
+#ad h1 {
+  font-size: calc(24px + 6 * (100vw - 320px) / 680);
+  font-weight: 900;
+}
+#ad select {
+  height: auto !important;
+}
+#ad .fullWidth .vc_column-inner {
   padding: 0;
 }/*# sourceMappingURL=App.css.map */

@@ -1,25 +1,6 @@
 @import './variables';
 @import './mixins';
 
-h1,
-h2,
-h3,
-h4,
-a {
-    font-family: $font-family;
-}
-
-h1 {
-    font-size: calc(24px + 6 * ((100vw - 320px) / 680));
-
-    font-weight: 900;
-}
-
-select {
-    height: auto !important;
-}
-
-
 #ad {
     width: auto;
     display: flex;
@@ -27,8 +8,27 @@ select {
     justify-content: center;
     align-items: center;
     gap: 60px;
-}
 
-.fullWidth .vc_column-inner {
-    padding: 0;
+    h1,
+    h2,
+    h3,
+    h4,
+    a {
+        font-family: $font-family;
+        color: black;
+    }
+
+    h1 {
+        font-size: calc(24px + 6 * ((100vw - 320px) / 680));
+
+        font-weight: 900;
+    }
+
+    select {
+        height: auto !important;
+    }
+
+    .fullWidth .vc_column-inner {
+        padding: 0;
+    }
 }

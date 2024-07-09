@@ -1,213 +1,215 @@
 @import '../../styles/mixins';
 @import '../../styles/variables';
 
-.scrollContainer {
-    /* layout */
-    align-items: flex-start;
-    justify-content: center;
-    gap: 12px;
-    position: fixed;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-
-    padding: 14px;
-    z-index: 1001;
-
-    /* style */
-    //border-radius: 12px;
-    //border: 3px solid $menu-grey;
-    background: rgba(0, 0, 0, 0.35);
-
-    /* effects */
-    box-shadow: $soft-drop;
-    backdrop-filter: blur(2px);
-
-    #listCardContainer {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        //margin-top: 10px;
-        max-width: 450px;
-        overflow: visible;
-        position: relative;
-        //max-height: 80vh;
-        padding-bottom: 100px;
-    }
-
-    #listControls {
-        display: flex;
-        flex-direction: column;
+#ad {
+    .scrollContainer {
+        /* layout */
         align-items: flex-start;
         justify-content: center;
-        gap: 11px;
-        position: sticky;
+        gap: 12px;
+        position: fixed;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+
         top: 0;
-        z-index: 1002;
+        left: 0;
+        height: 100%;
+        width: 100%;
 
-        #scrollPrint {
-            //height: 24px;
-            align-items: center;
-            justify-content: center;
-            background: $offwhite;
-        }
+        padding: 14px;
+        z-index: 1001;
 
-        #totalButton {
-            @include button();
-            @include buttonTypography();
+        /* style */
+        //border-radius: 12px;
+        //border: 3px solid $menu-grey;
+        background: rgba(0, 0, 0, 0.35);
 
-            margin: 0;
-            padding: 15px 10px;
-            height: 21px;
-            color: black;
-            font-weight: 600;
-            text-transform: capitalize;
-            box-sizing: content-box;
-        }
-
-        .close {
-            position: relative;
-            //left: 20px;
-            width: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
-            color: $menu-black;
-            opacity: 1;
-        }
-    }
-
-
-}
-
-.showCards {
-    display: flex !important;
-}
-
-.noScroll {
-    overflow: hidden;
-}
-
-
-.dragIcon {
-    color: $warm-grey;
-    cursor: grab;
-    touch-action: none;
-    position: absolute;
-    padding: 10% 10%;
-    right: -7%;
-}
-
-@media only screen and (max-width: 600px) {
-    .card {
-        width: 140px;
-    }
-
-    .scrollContainer {
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        width: auto;
+        /* effects */
+        box-shadow: $soft-drop;
+        backdrop-filter: blur(2px);
 
         #listCardContainer {
-            order: 2;
-            width: 92vw;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            //margin-top: 10px;
+            max-width: 450px;
+            overflow: visible;
+            position: relative;
+            //max-height: 80vh;
+            padding-bottom: 100px;
         }
 
         #listControls {
-            order: 1;
-            flex-direction: row;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 11px;
+            position: sticky;
+            top: 0;
+            z-index: 1002;
+
+            #scrollPrint {
+                //height: 24px;
+                align-items: center;
+                justify-content: center;
+                background: $offwhite;
+            }
+
+            #totalButton {
+                @include button();
+                @include buttonTypography();
+
+                margin: 0;
+                padding: 15px 10px;
+                height: 21px;
+                color: black;
+                font-weight: 600;
+                text-transform: capitalize;
+                box-sizing: content-box;
+            }
+
+            .close {
+                position: relative;
+                //left: 20px;
+                width: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                color: $menu-black;
+                opacity: 1;
+            }
+        }
+
+
+    }
+
+    .showCards {
+        display: flex !important;
+    }
+
+    .noScroll {
+        overflow: hidden;
+    }
+
+
+    .dragIcon {
+        color: $warm-grey;
+        cursor: grab;
+        touch-action: none;
+        position: absolute;
+        padding: 10% 10%;
+        right: -7%;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .card {
+            width: 140px;
+        }
+
+        .scrollContainer {
+            flex-direction: column;
             align-items: center;
-        }
-    }
-}
-
-@media only screen and (max-width: 400px) {
-    .section {
-        justify-content: center;
-    }
-
-    .menuContainer {
-        flex-direction: column;
-    }
-
-    .card {
-        width: auto;
-        flex-direction: row;
-        max-width: none;
-        align-items: center;
-
-        img {
-            width: 101px;
-        }
-
-        .badgeContainer {
-            display: none;
-        }
-
-        .badge {
-            width: 70%;
-        }
-
-        .additionalText {
-            position: absolute;
-            bottom: 5px;
-            width: 90px;
-            right: 5px;
-            text-align: right;
-        }
-
-        .cardTextContainer {
-            font-size: 10px;
-            padding: 0;
-            padding-left: 10px;
-
-            h2 {
-                font-size: 2.25em;
-            }
-
-            h3 {
-                font-size: 1.75em;
-            }
-
-            .unit {
-                font-size: 1.75em;
-            }
-
-            sup {
-                margin: 0;
-            }
-        }
-
-        .save {
-            height: auto;
+            justify-content: flex-start;
             width: auto;
-            top: -9px;
-            right: auto;
-            left: -12px;
 
-            p {
-                margin: 0;
+            #listCardContainer {
+                order: 2;
+                width: 92vw;
             }
 
-            span {
-                margin-right: 5px;
+            #listControls {
+                order: 1;
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 400px) {
+        .section {
+            justify-content: center;
+        }
+
+        .menuContainer {
+            flex-direction: column;
+        }
+
+        .card {
+            width: auto;
+            flex-direction: row;
+            max-width: none;
+            align-items: center;
+
+            img {
+                width: 101px;
             }
 
-            br {
+            .badgeContainer {
                 display: none;
             }
 
-            .star {
-                clip-path: none;
+            .badge {
+                width: 70%;
+            }
+
+            .additionalText {
+                position: absolute;
+                bottom: 5px;
+                width: 90px;
+                right: 5px;
+                text-align: right;
+            }
+
+            .cardTextContainer {
+                font-size: 10px;
+                padding: 0;
+                padding-left: 10px;
+
+                h2 {
+                    font-size: 2.25em;
+                }
+
+                h3 {
+                    font-size: 1.75em;
+                }
+
+                .unit {
+                    font-size: 1.75em;
+                }
+
+                sup {
+                    margin: 0;
+                }
+            }
+
+            .save {
+                height: auto;
+                width: auto;
+                top: -9px;
+                right: auto;
+                left: -12px;
+
+                p {
+                    margin: 0;
+                }
+
+                span {
+                    margin-right: 5px;
+                }
+
+                br {
+                    display: none;
+                }
+
+                .star {
+                    clip-path: none;
+                }
             }
         }
+
+
     }
-
-
 }
