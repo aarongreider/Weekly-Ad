@@ -62,7 +62,7 @@ function Card({ item }: props) {
   const containsAlphabet = (str: string) => /[a-zA-Z]/.test(str);
   const openMenu = (e: React.MouseEvent) => {
     // @ts-ignore
-    const container = e.target.parentElement.parentElement.querySelector('.menuItemContainer')
+    const container = e.target.parentElement.parentElement.parentElement.querySelector('.menuItemContainer')
     container.classList.toggle("flex")
     container.scrollIntoView({ behavior: 'smooth', block: 'center' })
   }
@@ -100,12 +100,14 @@ function Card({ item }: props) {
 
 
       {/* ADDITIONAL TEXT */}
-      {item.additional ? <p className="additionalText">{item.additional}</p> : undefined}
-      {item.menu == 'parent' &&
-        <p className="additionalText" style={{textDecoration: 'underline', color:"rgb(44 98 193)"}} onClick={openMenu}>
-          See Related Items
-        </p>
-      }
+      <div className="additionalText">
+        {item.additional ? <p >{item.additional}</p> : undefined}
+        {item.menu == 'parent' &&
+          <p style={{ textDecoration: 'underline', color: "rgb(44 98 193)", cursor: "pointer" }} onClick={openMenu}>
+            See Related Items
+          </p>
+        }
+      </div>
     </div>
   </>
 }
