@@ -175,13 +175,18 @@
                 top: 72px;
                 right: 12px;
                 flex-direction: column;
+
+                .toolbarButton {
+                    font-size: 28px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 24px;
+                    height: 24px;
+                }
             }
 
             .header {
-                justify-content: center;
-                width: 24px;
-                height: 24px;
-
                 >h1 {
                     display: none;
                 }

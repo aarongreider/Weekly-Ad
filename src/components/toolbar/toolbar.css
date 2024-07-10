@@ -147,8 +147,11 @@
     right: 12px;
     flex-direction: column;
   }
-  #root #toolbar .header {
+  #root #toolbar .tools .toolbarButton {
+    font-size: 28px;
+    display: flex;
     justify-content: center;
+    align-items: center;
     width: 24px;
     height: 24px;
   }
