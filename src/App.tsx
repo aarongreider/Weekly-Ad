@@ -15,7 +15,7 @@ function App() {
 
 
   useEffect(() => {
-    console.log("Loading ad data v1.5");
+    console.log("Loading ad data v1.6");
     console.log(categories)
   }, [categories])
   useEffect(() => {

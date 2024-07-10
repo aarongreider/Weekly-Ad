@@ -70,6 +70,6 @@
 @media only screen and (max-width: 400px) {
 	.menuItemContainer {
 		flex-wrap: nowrap !important;
-		max-height: none;
+		max-height: none !important;
 	}
 }
