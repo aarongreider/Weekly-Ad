@@ -44,6 +44,13 @@
             margin: 0;
         }
 
+        .tools {
+            display: flex;
+            flex-direction: row;
+            gap: inherit;
+            flex-wrap: wrap;
+        }
+
         .toolbarButton {
             padding: 14px;
             z-index: 1001;
@@ -84,6 +91,11 @@
                 color: $offwhite !important;
                 font-family: $font-family;
                 font-weight: 300;
+            }
+
+            .firefox {
+                padding-bottom: 2px;
+                padding-right: 1px;
             }
 
             .listIcon {
@@ -152,10 +164,27 @@
         #toolbar {
             left: 18px;
             gap: 8px;
-        }
 
-        #toolbar>* {
-            padding: 10px;
+            .toolbarButton {
+                padding: 12px;
+            }
+
+            .tools {
+                position: fixed;
+                top: 48px;
+                right: 12px;
+                flex-direction: column;
+            }
+
+            .header {
+                justify-content: center;
+                width: 24px;
+                height: 24px;
+
+                >h1 {
+                    display: none;
+                }
+            }
         }
 
         #toolbar *:not(.material-symbols-outlined) {

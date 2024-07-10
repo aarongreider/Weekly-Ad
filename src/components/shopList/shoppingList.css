@@ -96,20 +96,20 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .card {
+  #root .card {
     width: 140px;
   }
-  .scrollContainer {
+  #root .scrollContainer {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: auto;
   }
-  .scrollContainer #listCardContainer {
+  #root .scrollContainer #listCardContainer {
     order: 2;
     width: 92vw;
   }
-  .scrollContainer #listControls {
+  #root .scrollContainer #listControls {
     order: 1;
     flex-direction: row;
     align-items: center;

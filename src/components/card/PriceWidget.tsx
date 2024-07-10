@@ -16,11 +16,11 @@ function PriceWidget({ price, priceDisplay, unit }: props) {
      *  4. % off, basic display
      */
 
-    let formattedString, quantity;
+    let formattedString, quantityFor;
     if (priceDisplay == "SPECIALTY") {
         // splice out any characters preceding the dollar sign ad save them to a new variable called amount. Use regex to splice out / and For in the string
         let indexOfDivider = price.indexOf("/");
-        quantity = parseFloat(price.slice(0, indexOfDivider));
+        quantityFor = parseFloat(price.slice(0, indexOfDivider));
         price = price.slice(indexOfDivider + 1, price.length)
     }
 
@@ -44,8 +44,9 @@ function PriceWidget({ price, priceDisplay, unit }: props) {
         </div> : hasPercent ? <div className="priceContainer">
             <p className="percentOff">{price}</p>
         </div> : <div className="priceContainer">
-            {quantity ? <div className="specialtyAmnt" style={quantity > 9 ? { marginRight: '.3em', textAlign: 'right', /* fontSize: '21px' */ } : undefined}><p><span>{quantity}</span><br />FOR</p></div> : undefined}
+            {quantityFor ? <div className="specialtyAmnt" style={quantityFor > 9 ? { marginRight: '.3em', textAlign: 'right', /* fontSize: '21px' */ } : undefined}><p><span>{quantityFor}</span><br />FOR</p></div> : undefined}
             {belowOne ? undefined : <sup style={{ marginTop: '.25em' }}>$</sup>}
+            {belowOne && quantityFor ? <div style={{width:'10px'}}></div> : undefined} {/* conditional spacer */}
             <p className="dollar">{belowOne ? cents : dollars}</p>
             <div>
                 {!belowOne && cents != 0 ? <sup>{cents}</sup> : undefined}

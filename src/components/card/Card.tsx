@@ -59,7 +59,13 @@ function Card({ item }: props) {
 
   }
 
-
+  const containsAlphabet = (str: string) => /[a-zA-Z]/.test(str);
+  const openMenu = (e: React.MouseEvent) => {
+    // @ts-ignore
+    const container = e.target.parentElement.parentElement.querySelector('.menuItemContainer')
+    container.classList.toggle("flex")
+    container.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  }
 
   return <>
     <div className='card'>
@@ -85,7 +91,7 @@ function Card({ item }: props) {
       <div className="cardTextContainer">
         <h3>{item.brand}</h3>
         <h2>{item.description}</h2>
-        {item.priceDisplay == "NORMAL" ? <p className="unit">{item.size} {item.unit}</p> : undefined}
+        {item.priceDisplay == "NORMAL" ? <p className="unit">{containsAlphabet(item.size) ? parseFloat(item.size) : item.size} {item.unit}</p> : undefined}
         {/* {getPriceWidget(price.toString(), item.priceDisplay, item.unit)} */}
         <PriceWidget price={(item.price).toString()} priceDisplay={item.priceDisplay} unit={item.unit} ></PriceWidget>
       </div>
@@ -95,6 +101,11 @@ function Card({ item }: props) {
 
       {/* ADDITIONAL TEXT */}
       {item.additional ? <p className="additionalText">{item.additional}</p> : undefined}
+      {item.menu == 'parent' &&
+        <p className="additionalText" style={{textDecoration: 'underline', color:"rgb(44 98 193)"}} onClick={openMenu}>
+          See Related Items
+        </p>
+      }
     </div>
   </>
 }

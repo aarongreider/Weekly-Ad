@@ -107,25 +107,27 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .card {
-        width: 140px;
-    }
-
-    .scrollContainer {
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        width: auto;
-
-        #listCardContainer {
-            order: 2;
-            width: 92vw;
+    #root {
+        .card {
+            width: 140px;
         }
 
-        #listControls {
-            order: 1;
-            flex-direction: row;
+        .scrollContainer {
+            flex-direction: column;
             align-items: center;
+            justify-content: flex-start;
+            width: auto;
+
+            #listCardContainer {
+                order: 2;
+                width: 92vw;
+            }
+
+            #listControls {
+                order: 1;
+                flex-direction: row;
+                align-items: center;
+            }
         }
     }
 }

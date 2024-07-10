@@ -35,6 +35,12 @@
   letter-spacing: -0.8px;
   margin: 0;
 }
+#root #toolbar .tools {
+  display: flex;
+  flex-direction: row;
+  gap: inherit;
+  flex-wrap: wrap;
+}
 #root #toolbar .toolbarButton {
   padding: 14px;
   z-index: 1001;
@@ -73,6 +79,10 @@
   color: #EDEAE7 !important;
   font-family: "myriad-pro-semi-condensed", sans-serif;
   font-weight: 300;
+}
+#root #toolbar .header .firefox {
+  padding-bottom: 2px;
+  padding-right: 1px;
 }
 #root #toolbar .header .listIcon {
   font-size: 32px;
@@ -127,8 +137,22 @@
     left: 18px;
     gap: 8px;
   }
-  #root #toolbar > * {
-    padding: 10px;
+  #root #toolbar .toolbarButton {
+    padding: 12px;
+  }
+  #root #toolbar .tools {
+    position: fixed;
+    top: 48px;
+    right: 12px;
+    flex-direction: column;
+  }
+  #root #toolbar .header {
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+  }
+  #root #toolbar .header > h1 {
+    display: none;
   }
   #root #toolbar *:not(.material-symbols-outlined) {
     font-size: 16px;

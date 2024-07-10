@@ -6,8 +6,8 @@
 .card {
 	display: flex;
 	position: relative;
-	width: 200px;
-	max-width: 300px;
+	width: 180px;
+	/* max-width: 300px; */
 	padding: 8px 9px;
 	flex-direction: column;
 	flex-grow: 1;
@@ -25,6 +25,7 @@
 		object-fit: contain;
 		border-radius: 6px;
 		width: 100%;
+		max-height: 190px;
 		aspect-ratio: 1;
 		background: white;
 	}
@@ -97,7 +98,7 @@
 			flex-direction: row;
 
 			p {
-				margin: 1.3em -.2em 1.3em 0;
+				margin: 1.5em -.2em 1.3em 0;
 			}
 
 			span {
@@ -189,6 +190,7 @@
 	font-family: $font-family-bold;
 	font-style: normal;
 	font-weight: 400;
+	font-size: 14px;
 	letter-spacing: 0.187px;
 
 	>div {
@@ -231,6 +233,7 @@
 
 @media only screen and (max-width: 400px) {
 	.priceContainer {
+		font-size: 10px;
 		>div {
 			gap: 0;
 		}
@@ -263,7 +266,7 @@
         }
 
         .cardTextContainer {
-            font-size: 10px;
+            font-size: 9px;
             padding: 0;
             padding-left: 10px;
 
@@ -285,7 +288,7 @@
 
 			.specialtyAmnt {
 				p {
-					margin: 0 -0.2em .7em 0;
+					margin: 0 -0.2em .8em 0;
 				}
 			}
         }

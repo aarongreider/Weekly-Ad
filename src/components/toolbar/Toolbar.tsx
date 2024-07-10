@@ -42,18 +42,28 @@ function Toolbar({ sections, categories, printRef, groupSelect, openList }: prop
         categoryCopycat.current && setCategoryWidth(categoryCopycat.current.offsetWidth)
     }, [activeCategory, activeSection])
 
+    useEffect(() => {
+        // Check if the browser is Firefox
+        const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+
+        if (isFirefox) {
+            // Apply styles or add a class to elements
+            document.getElementById('listCounter')?.classList.add('firefox')
+        }
+    }, [])
+
 
     return <>
         <div id='toolbar'>
             {/* SHOPPING LIST BUTTONS */}
-            <div tabIndex={0} className="header toolbarButton" onClick={openList} style={{ order: 3 }}>
-                <span className="material-symbols-outlined listIcon">receipt_long</span>
-                <h1>View Shopping List</h1>
-                <span id="listCounter" className="button">{shoppingList.length}</span>
+            <div className='tools' style={{ order: 3 }}>
+                <div tabIndex={0} className="header toolbarButton" onClick={openList}>
+                    <span className="material-symbols-outlined listIcon">receipt_long</span>
+                    <h1>View Shopping List</h1>
+                    <span id="listCounter" className="button">{shoppingList.length}</span>
+                </div>
+                <span tabIndex={0} className="material-symbols-outlined print toolbarButton" onClick={() => handlePrint(printRef)}>print</span>
             </div>
-
-            <span tabIndex={0} className="material-symbols-outlined print toolbarButton" onClick={() => handlePrint(printRef)} style={{ order: 4 }}>print</span>
-
             {/* SECTION DROPDOWN */}
             <label htmlFor="sectionDropdown">Filter Section</label>
 

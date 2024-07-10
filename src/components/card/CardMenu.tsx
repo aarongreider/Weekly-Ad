@@ -7,7 +7,7 @@ import { AddButton } from './AddButton';
 
 interface props {
   item: Product;
-  /* addItem: void; */
+  /* addItem: void; */ 
 }
 
 function CardMenu({ item }: props) {
