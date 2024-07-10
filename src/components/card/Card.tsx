@@ -98,7 +98,6 @@ function Card({ item }: props) {
 
       <AddButton item={item} menu={item.menu}></AddButton>
 
-
       {/* ADDITIONAL TEXT */}
       <div className="additionalText">
         {item.additional ? <p >{item.additional}</p> : undefined}
