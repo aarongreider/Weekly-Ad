@@ -143,7 +143,7 @@
   }
   #root #toolbar .tools {
     position: fixed;
-    top: 48px;
+    top: 72px;
     right: 12px;
     flex-direction: column;
   }
