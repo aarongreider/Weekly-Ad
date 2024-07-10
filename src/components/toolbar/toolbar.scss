@@ -49,6 +49,7 @@
             flex-direction: row;
             gap: inherit;
             flex-wrap: wrap;
+            box-sizing: content-box;
         }
 
         .toolbarButton {

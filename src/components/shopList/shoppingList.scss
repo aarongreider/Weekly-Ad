@@ -16,7 +16,8 @@
         height: 100%;
         width: 100%;
 
-        padding: 14px;
+        padding: 0;
+        padding-top: 40px;
         z-index: 1001;
 
         /* style */
@@ -100,8 +101,8 @@
         cursor: grab;
         touch-action: none;
         position: absolute;
-        padding: 10% 10%;
-        right: -7%;
+        padding: 9% 6%;
+        right: -4%;
     }
 
 }
@@ -116,7 +117,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            width: auto;
+            //width: auto;
 
             #listCardContainer {
                 order: 2;

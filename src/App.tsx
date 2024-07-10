@@ -15,6 +15,7 @@ function App() {
 
 
   useEffect(() => {
+    console.log("Loading ad data v1.5");
     console.log(categories)
   }, [categories])
   useEffect(() => {
@@ -23,7 +24,6 @@ function App() {
 
   /* LOAD AD DATA */
   useEffect(() => {
-    console.log("Loading ad data v1.4");
     try {
       fetch(API_URL)
         .then(response => {
@@ -93,7 +93,7 @@ function App() {
 
   return (
     <>
-      <div id="ad" className='jcf-ignore' >
+      <div id="ad" className='jcf-ignore' style={{ margin: 0, padding: 0, gap: '18px', display: 'flex', flexDirection: 'column', }}>
         <ShoppingList visible={listIsOpen} printRef={printRef} closeList={handleToggleList}></ShoppingList>
         {activeGroup && Object.entries(activeGroup).map((group, index) => {
           return <SectionContainer key={index} sectionProducts={group} sectionTitle={group[0]} tagline={group[1][0][AD_ITEM_KEYS.tagline]}></SectionContainer>

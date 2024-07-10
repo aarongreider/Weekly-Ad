@@ -40,6 +40,7 @@
   flex-direction: row;
   gap: inherit;
   flex-wrap: wrap;
+  box-sizing: content-box;
 }
 #root #toolbar .toolbarButton {
   padding: 14px;
