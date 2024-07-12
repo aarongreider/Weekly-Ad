@@ -1,4 +1,5 @@
-export const API_URL = 'https://aaron.greider.org/Digital-Weekly-Ad/json/231002-3_ad.json';
+//export const API_URL = 'https://aaron.greider.org/Digital-Weekly-Ad/json/231002-3_ad.json';
+export const API_URL = 'https://gist.githubusercontent.com/aarongreider/80b5cecd58b2677ece06df4b3b40536f/raw/cbf7de85c64475b0d23a9d914b743a0663233169/weeklyadJSON';
 
 export const AD_ITEM_KEYS = {
     page: "PAGE",
